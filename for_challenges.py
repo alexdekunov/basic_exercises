@@ -12,7 +12,7 @@ print(*names, sep='\n')
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-for i in names1:
+for i in names:
     print(f'{i}: {len(i)}')
 
 
@@ -26,7 +26,7 @@ is_male = {
     'Маша': False,
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-for i in names2:
+for i in names:
     for j in is_male:
         if i == j:
             if is_male[j]:  #  == True
@@ -64,5 +64,5 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-for i in range(len(groups)):
-    print(f'Группа {i+1}: {groups[i]}')
+for num, group in enumerate(groups, start=1):
+    print(f'Группа {num}:', ', '.join(group).rstrip(','))
